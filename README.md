@@ -46,6 +46,3 @@ Al hacer clic en el botón de pago, se mostrará un mensaje de confirmación.
 
 Se implementará un loader de 3 segundos antes de mostrar el resumen de la transacción.
 
-Nota: La simulación de pago no funciona correctamente, por lo que no se genera la factura. Sin embargo, todas las demás funcionalidades de la aplicación operan correctamente.
-
-Tras finalizar la compra, se vaciará el localStorage para permitir nuevas compras.
