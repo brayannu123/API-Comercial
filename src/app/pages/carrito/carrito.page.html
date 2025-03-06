@@ -1,0 +1,34 @@
+<app-header></app-header>
+
+<ion-content>
+  <ion-list> 
+  @for(product of cart;track product;){
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <img [src]="product.image" alt="Taxmax Leather Bag">
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{product.title}}</h2>
+        
+      </ion-label>
+      <ion-text>{{product.price}}</ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-button fill="outline" size="small" (click)="decreaseQuantity(product.id)">-</ion-button>
+      <ion-text style="margin: 0 10px;">{{product.quantity}}</ion-text>
+      <ion-button fill="outline" size="small" (click)="increaseQuantity(product.id)">+</ion-button>
+      <ion-button fill="outline" size="small" (click)="removeProduct(product.id)"><ion-icon name="trash-bin"></ion-icon></ion-button>
+    </ion-item>
+  }
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-item lines="none">
+      <ion-label>Total</ion-label>
+      <ion-text>${{total}}</ion-text>
+    </ion-item>
+    <ion-button expand="full" color="primary" (click)="next()">Checkout</ion-button>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,9 @@
+<div class="filter-container">
+  <h3>Filtro por Categoría</h3>
+  <div class="buttons">
+    <button *ngFor="let category of category" (click)="selectCategory(category)">
+      {{ category }}
+    </button>
+    <button (click)="selectCategory('')">Mostrar Todos</button>
+  </div>
+</div>

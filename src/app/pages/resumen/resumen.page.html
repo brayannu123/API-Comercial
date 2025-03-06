@@ -1,0 +1,56 @@
+<ion-content>
+  <form [formGroup]="paymentForm" class="container">
+    <h2>Personal information</h2>
+    
+    <div class="input-group">
+      <div>
+        <label>Name</label>
+        <input type="text" formControlName="name"  />
+      </div>
+      <div>
+        <label>Last name</label>
+        <input type="text" formControlName="lastName"  />
+      </div>
+    </div>
+
+    <div class="input-group">
+      <div>
+        <label>Country</label>
+        <input type="text" formControlName="country"  />
+      </div>
+      <div>
+        <label>City</label>
+        <input type="text" formControlName="city" placeholder="City" />
+      </div>
+    </div>
+
+    <div>
+      <label>Address</label>
+      <input type="text" formControlName="address"  />
+    </div>
+
+    <h2>Payment information</h2>
+
+    <div>
+      <label>Enter Your Bank Account Number</label>
+      <input type="text" formControlName="bankAccount" placeholder="0123456789" />
+    </div>
+
+    <div class="input-group">
+      <div>
+        <label>CVC</label>
+        <input type="text" formControlName="cvc" placeholder="123" />
+      </div>
+      <div>
+        <label>Due Date</label>
+        <input type="text" formControlName="dueDate" placeholder="MM/YY" />
+      </div>
+      <div class="total">
+        <label>Total</label>
+        <span>$ {{ total }}</span>
+      </div>
+    </div>
+
+    <button type="submit"  class="payment-btn">Payment</button>
+  </form>
+</ion-content>

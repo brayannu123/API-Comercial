@@ -1,0 +1,29 @@
+<ion-header mode="md">
+  <ion-toolbar> 
+     <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+     </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<div class="product-container">
+  
+  <!-- Imagen del Producto -->
+  <div class="product-image-container">
+    <img [src]="detalle.image" [alt]="detalle.title">
+  </div>
+
+  <!-- Información del Producto -->
+  <div class="product-info">
+    <h1>{{ detalle.title }}</h1>
+    <p class="category">{{ detalle.category }}</p>
+    <p class="price">💲{{ detalle.price }}</p>
+    <p class="rating">⭐ {{ detalle.rating?.rate }} ({{ detalle.rating?.count }} reviews)</p>
+    <p>{{ detalle.description }}</p>
+
+    <ion-button expand="full" color="primary" (click)="addToCart(detalle)">
+      🛒 Añadir al carrito
+    </ion-button>
+  </div>
+
+</div>

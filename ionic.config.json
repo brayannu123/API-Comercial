@@ -1,0 +1,7 @@
+{
+  "name": "API-Comercial",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
